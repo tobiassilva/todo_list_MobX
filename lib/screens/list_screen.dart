@@ -45,7 +45,7 @@ class _ListScreenState extends State<ListScreen> {
                       icon: Icon(Icons.exit_to_app),
                       color: Colors.white,
                       onPressed: () {
-                        Provider.of<LoginStore>(context);
+                        Provider.of<LoginStore>(context, listen: false).logout();
                         Navigator.of(context).pushReplacement(MaterialPageRoute(
                             builder: (context) => LoginScreen()));
                       },
